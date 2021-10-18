@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber Reports  - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+                <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+    
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+            <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>demo</td>
+            <td>19 Aug 2020, 11:06</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+      </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+          <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+      </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+                      <tr>
+              <td class="location">Generic_Steps.create_new_bids(String,String,String,String,String,String,String,String,String)</td>
+              <td>3</td>
+              <td class="duration" data-value="39124325166">39.124</td>
+              <td class="duration" data-value="39124325166">40.880</td>
+              <td class="duration" data-value="117372975500">1:57.372</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Generic_Steps.finalSubmissionBidCreation(String,String,String,String,String,String,String,String,String)</td>
+              <td>1</td>
+              <td class="duration" data-value="20538697600">20.538</td>
+              <td class="duration" data-value="20538697600">20.538</td>
+              <td class="duration" data-value="20538697600">20.538</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Generic_Steps.iAmVerifiedCreateBidButtonDoesNotExist()</td>
+              <td>1</td>
+              <td class="duration" data-value="7522427200">7.522</td>
+              <td class="duration" data-value="7522427200">7.522</td>
+              <td class="duration" data-value="7522427200">7.522</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Generic_Steps.iClickOnBiDRecordCheckboxWhichWeWantToShare()</td>
+              <td>1</td>
+              <td class="duration" data-value="3530081600">3.530</td>
+              <td class="duration" data-value="3530081600">3.530</td>
+              <td class="duration" data-value="3530081600">3.530</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Generic_Steps.iClickOnBidCreatedAs()</td>
+              <td>2</td>
+              <td class="duration" data-value="10262747350">10.262</td>
+              <td class="duration" data-value="10262747350">10.351</td>
+              <td class="duration" data-value="20525494700">20.525</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Generic_Steps.iClickOnBidCreatedAs(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="10338478100">10.338</td>
+              <td class="duration" data-value="10338478100">10.338</td>
+              <td class="duration" data-value="10338478100">10.338</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Generic_Steps.iClickOnBidListMenuItem()</td>
+              <td>17</td>
+              <td class="duration" data-value="5008767364">5.008</td>
+              <td class="duration" data-value="5008767364">9.744</td>
+              <td class="duration" data-value="85149045201">1:25.149</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Generic_Steps.iClickOnCheckInOptionFromAdvanceMenu()</td>
+              <td>2</td>
+              <td class="duration" data-value="10601441499">10.601</td>
+              <td class="duration" data-value="10601441499">11.591</td>
+              <td class="duration" data-value="21202882999">21.202</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Generic_Steps.iClickOnCopyAndVerifyIntoRespectiveCRMID()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Generic_Steps.iClickOnDeleteButtonForDeletingTheBidManagerRecord()</td>
+              <td>2</td>
+              <td class="duration" data-value="466209300">0.466</td>
+              <td class="duration" data-value="466209300">0.699</td>
+              <td class="duration" data-value="932418600">0.932</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Generic_Steps.iClickOnDeleteConfirmationButtonForDeleting()</td>
+              <td>2</td>
+              <td class="duration" data-value="243140250">0.243</td>
+              <td class="duration" data-value="243140250">0.258</td>
+              <td class="duration" data-value="486280500">0.486</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Generic_Steps.iClickOnDeleteOption()</td>
+              <td>1</td>
+              <td class="duration" data-value="4046906001">4.046</td>
+              <td class="duration" data-value="4046906001">4.046</td>
+              <td class="duration" data-value="4046906001">4.046</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Generic_Steps.iClickOnHomePageMenuLeftHandSideBar()</td>
+              <td>1</td>
+              <td class="duration" data-value="15774100">0.015</td>
+              <td class="duration" data-value="15774100">0.015</td>
+              <td class="duration" data-value="15774100">0.015</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Generic_Steps.iClickOnPropertiesMenuAndCheckTheVerifyCheckoutPopupWindow()</td>
+              <td>3</td>
+              <td class="duration" data-value="2060701066">2.060</td>
+              <td class="duration" data-value="2060701066">2.076</td>
+              <td class="duration" data-value="6182103199">6.182</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Generic_Steps.iClickOnPropertiesOption()</td>
+              <td>2</td>
+              <td class="duration" data-value="7068884650">7.068</td>
+              <td class="duration" data-value="7068884650">7.071</td>
+              <td class="duration" data-value="14137769300">14.137</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Generic_Steps.iClickOnRestrictedWidgetFromDashBoard()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Generic_Steps.iClickOnSearchBoxAndEnterTheDataAsAdvanceKey()</td>
+              <td>1</td>
+              <td class="duration" data-value="18989753100">18.989</td>
+              <td class="duration" data-value="18989753100">18.989</td>
+              <td class="duration" data-value="18989753100">18.989</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Generic_Steps.iClickOnSearchBoxAndEnterTheSearchValue()</td>
+              <td>1</td>
+              <td class="duration" data-value="10180792000">10.180</td>
+              <td class="duration" data-value="10180792000">10.180</td>
+              <td class="duration" data-value="10180792000">10.180</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Generic_Steps.iClickOnTheAttachmentAndCopyDocumentsInAnotherCRMID()</td>
+              <td>1</td>
+              <td class="duration" data-value="1870431300">1.870</td>
+              <td class="duration" data-value="1870431300">1.870</td>
+              <td class="duration" data-value="1870431300">1.870</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Generic_Steps.iClickOnTheZipButtonForAndVerifyZipGetsDownloaded()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Generic_Steps.iClickOnZipButtonWithoutSelectingTheAttachment()</td>
+              <td>1</td>
+              <td class="duration" data-value="10062061299">10.062</td>
+              <td class="duration" data-value="10062061299">10.062</td>
+              <td class="duration" data-value="10062061299">10.062</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Generic_Steps.iDragTheFileFromWindowComponent()</td>
+              <td>1</td>
+              <td class="duration" data-value="30030600700">30.030</td>
+              <td class="duration" data-value="30030600700">30.030</td>
+              <td class="duration" data-value="30030600700">30.030</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Generic_Steps.iHaveClickOnSendButton()</td>
+              <td>1</td>
+              <td class="duration" data-value="132990000">0.132</td>
+              <td class="duration" data-value="132990000">0.132</td>
+              <td class="duration" data-value="132990000">0.132</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Generic_Steps.iHaveEnterTheSenderName(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="10323477700">10.323</td>
+              <td class="duration" data-value="10323477700">10.323</td>
+              <td class="duration" data-value="10323477700">10.323</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Generic_Steps.iHaveLoggedInFullPermissionUserModel(String)</td>
+              <td>18</td>
+              <td class="duration" data-value="33171060411">33.171</td>
+              <td class="duration" data-value="33171060411">45.406</td>
+              <td class="duration" data-value="597079087400">9:57.079</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Generic_Steps.iNavigateAndSwitchTheWindowToBidListRecord()</td>
+              <td>8</td>
+              <td class="duration" data-value="23401924174">23.401</td>
+              <td class="duration" data-value="23401924174">29.509</td>
+              <td class="duration" data-value="187215393399">3:7.215</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Generic_Steps.iNavigateToClickOnBidRecordWhoIsHavingExistAttachments()</td>
+              <td>2</td>
+              <td class="duration" data-value="10327860000">10.327</td>
+              <td class="duration" data-value="10327860000">10.426</td>
+              <td class="duration" data-value="20655720000">20.655</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Generic_Steps.iNavigateToClickOnEarlierCreatedBidRecord()</td>
+              <td>4</td>
+              <td class="duration" data-value="10313808150">10.313</td>
+              <td class="duration" data-value="10313808150">10.358</td>
+              <td class="duration" data-value="41255232600">41.255</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Generic_Steps.iNavigateToEditPropertiesLink(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="48154823400">48.154</td>
+              <td class="duration" data-value="48154823400">48.154</td>
+              <td class="duration" data-value="48154823400">48.154</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Generic_Steps.iNavigateToExistBidCreatedRecords()</td>
+              <td>2</td>
+              <td class="duration" data-value="10391558500">10.391</td>
+              <td class="duration" data-value="10391558500">10.483</td>
+              <td class="duration" data-value="20783117000">20.783</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Generic_Steps.iNavigateToFinalSubmission()</td>
+              <td>1</td>
+              <td class="duration" data-value="7845329900">7.845</td>
+              <td class="duration" data-value="7845329900">7.845</td>
+              <td class="duration" data-value="7845329900">7.845</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Generic_Steps.iNavigateToUploadTheButtons()</td>
+              <td>5</td>
+              <td class="duration" data-value="35586059679">35.586</td>
+              <td class="duration" data-value="35586059679">37.645</td>
+              <td class="duration" data-value="177930298399">2:57.930</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Generic_Steps.iNavigateToViewAllPropertiesLink()</td>
+              <td>1</td>
+              <td class="duration" data-value="32471019400">32.471</td>
+              <td class="duration" data-value="32471019400">32.471</td>
+              <td class="duration" data-value="32471019400">32.471</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Generic_Steps.iSelectTheAttachmentForMakingFinalSubmission()</td>
+              <td>1</td>
+              <td class="duration" data-value="4086438500">4.086</td>
+              <td class="duration" data-value="4086438500">4.086</td>
+              <td class="duration" data-value="4086438500">4.086</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Generic_Steps.iSelectTheDropDownAsDestinationCRMIDIs()</td>
+              <td>1</td>
+              <td class="duration" data-value="57484000">0.057</td>
+              <td class="duration" data-value="57484000">0.057</td>
+              <td class="duration" data-value="57484000">0.057</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Generic_Steps.iVerifyDeleteButtonDoesNotExist()</td>
+              <td>1</td>
+              <td class="duration" data-value="629742300">0.629</td>
+              <td class="duration" data-value="629742300">0.629</td>
+              <td class="duration" data-value="629742300">0.629</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Generic_Steps.i_click_on_button()</td>
+              <td>3</td>
+              <td class="duration" data-value="11367187866">11.367</td>
+              <td class="duration" data-value="11367187866">11.975</td>
+              <td class="duration" data-value="34101563600">34.101</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Generic_Steps.restrictedBidCreation(String,String,String,String,String,String,String,String,String)</td>
+              <td>1</td>
+              <td class="duration" data-value="20550974900">20.550</td>
+              <td class="duration" data-value="20550974900">20.550</td>
+              <td class="duration" data-value="20550974900">20.550</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Generic_Steps.selectTheRespectiveDocForZipDownloadAndDocNameIsAsDocName(String)</td>
+              <td>2</td>
+              <td class="duration" data-value="6076657950">6.076</td>
+              <td class="duration" data-value="6076657950">12.153</td>
+              <td class="duration" data-value="12153315900">12.153</td>
+              <td class="failed">50.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Generic_Steps.setReverifyDocAttachVal(String,String,String,String)</td>
+              <td>5</td>
+              <td class="duration" data-value="30788877879">30.788</td>
+              <td class="duration" data-value="30788877879">38.538</td>
+              <td class="duration" data-value="153944389399">2:33.944</td>
+              <td class="failed">80.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Generic_Steps.verifyBidCreationExpectedData(String,String,String,String,String,String,String,String,String)</td>
+              <td>1</td>
+              <td class="duration" data-value="20574075501">20.574</td>
+              <td class="duration" data-value="20574075501">20.574</td>
+              <td class="duration" data-value="20574075501">20.574</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Generic_Steps.verifyRespectiveDocumentStatusShouldGetChange()</td>
+              <td>1</td>
+              <td class="duration" data-value="4652885000">4.652</td>
+              <td class="duration" data-value="4652885000">4.652</td>
+              <td class="duration" data-value="4652885000">4.652</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Generic_Steps.verifyShareButtonIsDispalyedOrNot()</td>
+              <td>1</td>
+              <td class="duration" data-value="15303491400">15.303</td>
+              <td class="duration" data-value="15303491400">15.303</td>
+              <td class="duration" data-value="15303491400">15.303</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Generic_Steps.verifyTheEnteredValueGetsReturnOrNot()</td>
+              <td>1</td>
+              <td class="duration" data-value="31854400">0.031</td>
+              <td class="duration" data-value="31854400">0.031</td>
+              <td class="duration" data-value="31854400">0.031</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Generic_Steps.verifyTheEnteredValueGetsReturnOrNotOnAdvanceViewPage()</td>
+              <td>1</td>
+              <td class="duration" data-value="83998800">0.083</td>
+              <td class="duration" data-value="83998800">0.083</td>
+              <td class="duration" data-value="83998800">0.083</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Generic_Steps.verifyTheKeyGetsReturnSucessfullyOrNot()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Generic_Steps.verifyTheRespectiveRecordGotDeleted()</td>
+              <td>2</td>
+              <td class="duration" data-value="17194955200">17.194</td>
+              <td class="duration" data-value="17194955200">32.290</td>
+              <td class="duration" data-value="34389910400">34.389</td>
+              <td class="failed">50.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Generic_Steps.verifyTheRestrictedBidRecord()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Generic_Steps.verifyTheShareNotificationIconDisplayOrNot()</td>
+              <td>1</td>
+              <td class="duration" data-value="3148632500">3.148</td>
+              <td class="duration" data-value="3148632500">3.148</td>
+              <td class="duration" data-value="3148632500">3.148</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Generic_Steps.verifyTheUpdatedData(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="39724800">0.039</td>
+              <td class="duration" data-value="39724800">0.039</td>
+              <td class="duration" data-value="39724800">0.039</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Generic_Steps.veriyDeleteVerificationPopupExist()</td>
+              <td>1</td>
+              <td class="duration" data-value="10022095500">10.022</td>
+              <td class="duration" data-value="10022095500">10.022</td>
+              <td class="duration" data-value="10022095500">10.022</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Generic_Steps.veriyTheCheckOutPopupWindowDisplayOrNot()</td>
+              <td>1</td>
+              <td class="duration" data-value="8406517300">8.406</td>
+              <td class="duration" data-value="8406517300">8.406</td>
+              <td class="duration" data-value="8406517300">8.406</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Hooks.embedScreenshot(Scenario)</td>
+              <td>18</td>
+              <td class="duration" data-value="1152849699">1.152</td>
+              <td class="duration" data-value="1152849699">1.530</td>
+              <td class="duration" data-value="20751294599">20.751</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Hooks.openBrowser()</td>
+              <td>18</td>
+              <td class="duration" data-value="6136179194">6.136</td>
+              <td class="duration" data-value="6136179194">9.361</td>
+              <td class="duration" data-value="110451225497">1:50.451</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                  </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>54</td>
+            <td>154</td>
+            <td class="duration">12.859</td>
+            <td class="duration">9:57.079</td>
+            <td class="duration">33:0.341</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

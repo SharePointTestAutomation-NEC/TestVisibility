@@ -1,0 +1,257 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 6,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": []
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 2241380500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.openBrowser()"
+            }
+          }
+        ],
+        "line": 22,
+        "name": ": Create a New bid",
+        "description": "",
+        "id": "bidcreation-as-create--update-and-delete.;:-create-a-new-bid;;3",
+        "after": [
+          {
+            "result": {
+              "duration": 1309693400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.embedScreenshot(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 23878178800,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I have logged in full permission user model AdminRights",
+            "match": {
+              "arguments": [
+                {
+                  "val": "AdminRights",
+                  "offset": 44
+                }
+              ],
+              "location": "Generic_Steps.iHaveLoggedInFullPermissionUserModel(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 7995567500,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "I click on Bid List Menu Item",
+            "match": {
+              "location": "Generic_Steps.iClickOnBidListMenuItem()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 21366183500,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "I click on Create New bid button",
+            "match": {
+              "location": "Generic_Steps.i_click_on_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 45095761400,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "I Create new bids with values Bid Creation Test on environment and British Telecom1 and BAFO and Test and Matthew T and Standard Security and Notes1 and SecurityClearanceRequirements1 and SubmissionInstructions1",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Bid Creation Test on environment",
+                  "offset": 30
+                },
+                {
+                  "val": "British Telecom1",
+                  "offset": 67
+                },
+                {
+                  "val": "BAFO",
+                  "offset": 88
+                },
+                {
+                  "val": "Test",
+                  "offset": 97
+                },
+                {
+                  "val": "Matthew T",
+                  "offset": 106
+                },
+                {
+                  "val": "Standard Security",
+                  "offset": 120
+                },
+                {
+                  "val": "Notes1",
+                  "offset": 142
+                },
+                {
+                  "val": "SecurityClearanceRequirements1",
+                  "offset": 153
+                },
+                {
+                  "val": "SubmissionInstructions1",
+                  "offset": 188
+                }
+              ],
+              "location": "Generic_Steps.create_new_bids(String,String,String,String,String,String,String,String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 21696302900,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "I Verify the bid Creation successfully created with values of Bid Creation Test on environment and British Telecom1 and BAFO and Test and Matthew T and Standard Security and Notes1 and SecurityClearanceRequirements1 and SubmissionInstructions1",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Bid Creation Test on environment",
+                  "offset": 62
+                },
+                {
+                  "val": "British Telecom1",
+                  "offset": 99
+                },
+                {
+                  "val": "BAFO",
+                  "offset": 120
+                },
+                {
+                  "val": "Test",
+                  "offset": 129
+                },
+                {
+                  "val": "Matthew T",
+                  "offset": 138
+                },
+                {
+                  "val": "Standard Security",
+                  "offset": 152
+                },
+                {
+                  "val": "Notes1",
+                  "offset": 174
+                },
+                {
+                  "val": "SecurityClearanceRequirements1",
+                  "offset": 185
+                },
+                {
+                  "val": "SubmissionInstructions1",
+                  "offset": 220
+                }
+              ],
+              "location": "Generic_Steps.verifyBidCreationExpectedData(String,String,String,String,String,String,String,String,String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 30047953200,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "I Navigate to Upload the buttons",
+            "match": {
+              "location": "Generic_Steps.iNavigateToUploadTheButtons()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 39311784400,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "I Navigate to verify document and selection drop value as Bid Plan and Tracker - CRM 103501 and BAFO and Bid Planning and Bid Plan",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Bid Plan and Tracker - CRM 103501",
+                  "offset": 58
+                },
+                {
+                  "val": "BAFO",
+                  "offset": 96
+                },
+                {
+                  "val": "Bid Planning",
+                  "offset": 105
+                },
+                {
+                  "val": "Bid Plan",
+                  "offset": 122
+                }
+              ],
+              "location": "Generic_Steps.setReverifyDocAttachVal(String,String,String,String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@BidPortalTest01"
+          },
+          {
+            "name": "@TC001_Bid_Creation"
+          },
+          {
+            "name": "#done"
+          }
+        ]
+      }
+    ],
+    "name": "BidCreation as Create, update and delete.",
+    "description": "  As a user who wants to create a new bid Creation\n  I want to verify if the given fields are visible and enabled",
+    "id": "bidcreation-as-create--update-and-delete.",
+    "keyword": "Feature",
+    "uri": "C:/Applications/New Framework (4)/New Framework/src/test/resources/features/CreateNewBidCreation.feature",
+    "tags": [
+      {
+        "name": "@BidPortalTest01",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]

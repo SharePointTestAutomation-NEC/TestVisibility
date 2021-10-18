@@ -1,0 +1,12 @@
+#Thu Jul 02 23:53:01 IST 2020
+url=http\://tc3-v-devsp06\:9999/SitePages/Home.aspx
+testDataSheetName=SharepointTestData.xlsx
+username=jigar.mehta1
+chromeexepath=C\:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe
+browser=IE
+firefoxexepath="C\:\\Program Files\\Mozilla Firefox\\firefox.exe"
+attachmentName=Bid Plan and Tracker - CRM 103501.xlsx
+firefoxdriverdriverpath=C\:\\SeleniumDrivers\\geckodriver.exe
+BidId=BID-1593714127208
+password=Mumbai21@\!
+chromedriverpath=chromedriver.exe
