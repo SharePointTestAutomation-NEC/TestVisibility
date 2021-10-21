@@ -1355,8 +1355,8 @@ public void editMenuBar()throws InterruptedException{
 		prop.load(ip);
 		String Username = prop.getProperty("testUsername");
 		String pwd  =  prop.getProperty("testPwd");
-		String url = prop.getProperty("urlPermission");
-		String Url = "http://sptestuser:R@ve1234567890@tc3-v-devsp05:8888/Bid%20List/Forms/";
+		String url = prop.getProperty("url");
+		String Url = "http://"+ Username + ":" + pwd + "@" + url;
 		System.out.println("=============TestUser"+ Url.trim());
 		return Url.trim();
 	}
