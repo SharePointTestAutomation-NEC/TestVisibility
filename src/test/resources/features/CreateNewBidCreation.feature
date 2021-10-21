@@ -19,7 +19,6 @@ Feature: BidCreation as Create, update and delete.
     Examples:
       | BidTitle       | ClientName       | BidEventType | BidManager | SalesLead | Sensitivitylevel  | Notes| Securityclearancerequirements  | SubmissionInstructions  | DocName                           |DocTypes|DocumentGrp   |subGrp|
       | Bid Creation Test on environment | British Telecom1 | BAFO         | Test       | Matthew T | Standard Security | Notes1| SecurityClearanceRequirements1 | SubmissionInstructions1 | Bid Plan and Tracker - CRM 103501|BAFO|Bid Planning|Bid Plan|
-      | Bid Creation Test on environment | British Telecom1 | BAFO         | Test       | Matthew T | Standard Security | Notes1| SecurityClearanceRequirements1 | SubmissionInstructions1 | Bid Plan and Tracker - CRM 103501|BAFO|Bid Planning|Bid Plan|
 
   @TC002_ZipFileDownLoad   #done
   Scenario Outline: Download the zip file from Bid creation
